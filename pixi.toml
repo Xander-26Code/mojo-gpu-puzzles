@@ -5,6 +5,12 @@ name = "mojo-gpu-puzzles"
 platforms = ["linux-64", "linux-aarch64", "osx-arm64"]
 version = "1.0.0"
 
+[pypi-options]
+# 使用清华镜像源加速 PyPI 下载
+index-url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+# 备用源，当主源找不到包时使用
+extra-index-urls = ["https://pypi.org/simple/"]
+
 [feature.nvidia]
 system-requirements = { cuda = "12" }
 channels = ["nvidia"]
